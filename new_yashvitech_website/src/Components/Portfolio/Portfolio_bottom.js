@@ -1,15 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import "../Portfolio/Portfolio_bottom.css";
 import gsap from "gsap";
-import Apsh from "../Image/apsh.jpg";
-import bill_zap from "../Image/bill_zap.jpg";
-import courier from "../Image/courier&logistics.jpg";
-import ddc from "../Image/ddc.jpg";
-import krishna from "../Image/krishna.jpg";
-import Shankar from "../Image/shankar_machenics.png";
-import portfolio from "../Image/portfolio.3.bddebbb975ff8ef01ae4.jpg";
-import priyanshi from "../Image/priyanshi.jpg";
-import rupesh from "../Image/rupesh.jpg";
+import Apsh from "../Images/apsh.jpg";
+import bill_zap from "../Images/bill_zap.jpg";
+import courier from "../Images/courier&logistics.jpg";
+import ddc from "../Images/ddc.jpg";
+import krishna from "../Images/krishna.jpg";
+import Shankar from "../Images/shankar_machenics.png";
+import portfolio from "../Images/portfolio.3.bddebbb975ff8ef01ae4.jpg";
+import priyanshi from "../Images/priyanshi.jpg";
+import rupesh from "../Images/rupesh.jpg";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
