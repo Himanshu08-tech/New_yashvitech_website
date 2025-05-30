@@ -1,9 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Contact from './Component/Contact us/Contact us';
+import React from 'react';
+import Car from './Components/Car/Car' // ✔️ correct import if Car.js is in the same folder
+import Service from './Components/Service/Service'; // ✔️ correct import if Service.js is in the same folder
+import Contact from './Components/Contact/Contact'; // ✔️ correct import if Contact.js is in the same folder
 function App() {
   return (
-    <div className="App">
+    <div>
+      <Car />
+      <Service />
+      {/* <Contact /> Uncomment this line if you want to include the Contact component */}
       <Contact/>
     </div>
   );

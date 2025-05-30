@@ -1,0 +1,120 @@
+.service-container {
+  max-width: 80%;
+  margin: 40px auto;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.service-item {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.service-id {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  min-width: 30px;
+}
+
+.service-header h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #333;
+}
+
+.tags {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.service-content {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+.service-item:hover .service-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+/* Unique hover background colors */
+.service-item.card-1:hover {
+  background-color: #e0f7fa;
+}
+.service-item.card-2:hover {
+  background-color: #f1f8e9;
+}
+.service-item.card-3:hover {
+  background-color: #fff3e0;
+}
+.service-item.card-4:hover {
+  background-color: #fce4ec;
+}
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  /* padding: 60px 40px; */
+  border-radius: 20px;
+  /* margin: 20px; */
+  gap: 80px;
+}
+
+.top-banner-left {
+  flex: 1;
+  color: #1c1c1c;
+}
+
+.top-banner-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.top-banner-left p {
+  color: #5f5f5f;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+
+.top-banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.top-banner-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.top-banner-right video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
