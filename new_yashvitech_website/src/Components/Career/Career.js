@@ -120,7 +120,7 @@
 
 // export default Careers;
 import React, { useState } from 'react';
-import './Car.css';
+import './Career.css';
 import careersImage from '../Images/a.webp';
 import secondImage from '../Images/aa.jpg';
 import video1 from '../videos/u1.mp4';
