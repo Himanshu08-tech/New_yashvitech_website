@@ -1,0 +1,163 @@
+.about-section {
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top-left corner gradient curve */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px; /* adjust as needed */
+  height: 400px; /* adjust as needed */
+  background: linear-gradient(135deg, #cda8f7, transparent);
+  border-bottom-right-radius: 100%;
+  z-index: -1;
+}
+
+.about-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.about-title {
+  font-size: 5rem;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+
+
+  /* Enhanced, dramatic multi-layer text shadow for golden-glow + depth */
+  text-shadow:
+    2px 2px 8px rgba(0, 0, 0, 0.4),              /* soft black base shadow */
+    3px 3px 6px rgba(255, 215, 0, 0.6),          /* golden edge glow */
+    /* 0 0 12px rgba(255, 223, 70, 0.75),           outer golden aura */
+    0 0 20px rgba(255, 255, 180, 0.4);           /* subtle white blend */
+  
+  color: #111; /* Keep text readable if not using background clip */
+}
+
+.about-title.shrink {
+  font-size: 2rem;
+}
+
+/* === New Flex Grid Below the About Title === */
+.about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Left side: Digital + About Text */
+.about-info {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.digital {
+  font-size: 2.5rem;
+  color: #4a3803;
+  margin-bottom: 1rem;
+  margin-left: 50px;
+  font-weight: 700;
+ font-size: 60px;
+  text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.2),
+    2px 2px 5px rgba(255, 215, 0, 0.4); /* golden subtle glow */
+
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end)
+
+
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #333 }
+}
+
+
+.about-text {
+  font-size: 1.2rem;
+  color: #444;
+   
+  max-width: 100%;
+  margin-left: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Right side: Image */
+.info-grid {
+  position: relative;
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Green background box behind image */
+.blank {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #5e063f; /* Classy green */
+ 
+  z-index: 0;
+  transform: translate(30px, 30px);
+  animation: floatBox 4s ease-in-out infinite;
+  box-shadow: 0 4px 20px rgba(0, 128, 0, 0.3);
+}
+
+/* Smooth float animation */
+@keyframes floatBox {
+  0%, 100% {
+    transform: translate(30px, 30px);
+  }
+  50% {
+    transform: translate(40px, 40px);
+  }
+}
+
+.info-grid img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  
+  /* Apply floating animation */
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Smooth floating animation for the image */
+@keyframes floatImage {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}

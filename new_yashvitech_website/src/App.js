@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Contact from './Component/Contact us/Contact us';
+import About from './Component_about/About'
+import About1 from './Component_about/About1'
+import About2 from './Component_about/About2'
 function App() {
   return (
     <div className="App">
-      <Contact/>
+      <About/>
+      <About1/>
+      <About2/>
     </div>
   );
 }
