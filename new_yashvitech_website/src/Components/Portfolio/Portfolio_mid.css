@@ -1,0 +1,65 @@
+.how-it-works-container {
+  padding: 50px 20px;
+  background: #f8f9fb;
+  text-align: center;
+   background:
+    radial-gradient(circle at bottom center, #f5e4f7 18%, transparent 55%),
+    #fff; 
+}
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.icon-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #f8be2d;
+}
+
+.line {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background-color: #0d0d0e;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
