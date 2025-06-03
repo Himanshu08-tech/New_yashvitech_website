@@ -1,0 +1,257 @@
+.about-container1 {
+  display: flex;
+  flex-direction: row;
+
+  height: 500px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.left-section {
+  width: 50%;
+  margin-top: 50px;
+  padding: 0 40px;
+}
+
+.left-section h1 {
+  color: purple;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.right-section-carousel {
+  width: 60%;
+  height: 100%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.carousel-card {
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* adds glass-like blur effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+  padding: 20px;
+  width: 500px;
+  min-height: 280px;
+  height: 350px;
+  margin: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* deeper shadow for a floating effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px; /* slightly more rounded corners */
+}
+
+
+/* Slide styling */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Highlight center */
+.swiper-slide-active .carousel-card {
+  transform: scale(1.07);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* stronger highlight */
+  border-color: #b388eb;
+  opacity: 1;
+  width: 120%;
+}
+
+/* Style side cards */
+.swiper-slide-prev .carousel-card,
+.swiper-slide-next .carousel-card {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) .carousel-card {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+/* Title */
+.carousel-card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #050f3e; /* soft dark gray */
+    text-shadow: 1px 1px 2px rgba(249, 175, 90, 0.9); /* subtle shadow */
+
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #151515;
+  margin-bottom: 10px;
+ 
+}
+
+
+/* Optional image style (if needed) */
+.card-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+.emoji-box {
+  margin-top: 16px;
+  padding: 32px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+.subscribe-btn {
+  background-color: orange;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: purple;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* Ensure the page scrolls, not the internal container */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container layout */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.animated-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 40px 0;
+  color: #003366;
+  animation: fadeSlideDown 1s ease-in-out;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll layout */
+.split-layout {
+  display: flex;
+  height: auto; /* No full-screen trap */
+  align-items: flex-start;
+}
+
+/* Sticky left side (image) */
+.split-left {
+  position: sticky;
+  top: 0;
+  height: 450px;
+  width: 70%;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 40px;
+}
+
+.split-image {
+width: 70%;
+height: 450px;
+  object-fit: cover;
+ background-image: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  
+}
+
+/* Right side scrolls fully */
+.split-right {
+  width: 60%;
+ 
+  padding: 60px 40px;
+  padding-top: 20px;
+}
+
+/* Each scrollable section */
+.split-section {
+  min-height: 70vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+box-shadow:0 20px 50px rgba(0, 0, 0, 0.2); ;
+ padding-top: -200px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+ 
+
+  text-align: center;
+  width: 100%;
+  margin-left: -20px;
+}
+
+.split-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.split-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+  
+}
+
+.split-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+ 
+ 
+}

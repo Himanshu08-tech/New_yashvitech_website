@@ -1,22 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Career from './Components/Career/Career';
-import Service from './Components/Service/Service'; // ✔️ correct import if Service.js is in the same folder
-import Contact from './Components/Contact/Contact'; 
-import PortfolioTitlePage from './Components/Portfolio/Portfolio_main';
-import PortfoliomidPage from './Components/Portfolio/Portfolio_mid';
-import PortfoliobottomPage from './Components/Portfolio/Portfolio_bottom';
+import Service from './Components/Service/Service';
+import Contact from './Components/Contact/Contact';
+import Portfolio from './Components/Portfolio/portfolio';
+import About from "./Components/about/mainabout"
+// import Main from './Components/home/main';
+// import Header from './Components/home/header';
+// import Footer from './Components/home/footer';
 
 function App() {
   return (
-    <div>
-      <Career />
-      <Service />
-      {/* <Contact /> Uncomment this line if you want to include the Contact component */}
-      <Contact/>
-      <PortfolioTitlePage />
-      <PortfoliomidPage />
-      <PortfoliobottomPage />
-    </div>
+    <Router>
+      {/* <Header /> */}
+      <Routes>
+        {/* <Route path="/" element={<Main />} /> */}
+        <Route path="/" element={<Career />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio/>} />
+         <Route path="/about" element={<About/>} />
+        
+        
+      </Routes>
+      {/* <Footer /> */}
+    </Router>
   );
 }
 
