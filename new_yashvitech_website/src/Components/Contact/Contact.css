@@ -1,6 +1,6 @@
 .get-in-touch {
   font-family: 'Arial', sans-serif;
-  padding: 40px;
+  padding: 50px;
   background-color: #fff;
   color: #000;
 }
@@ -60,7 +60,7 @@ textarea {
 }
 
 button {
-  width: 120px;
+  width: 220px;
   padding: 10px;
   background-color: #000;
   color: #fff;
