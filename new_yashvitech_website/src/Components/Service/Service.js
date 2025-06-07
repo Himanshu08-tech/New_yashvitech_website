@@ -1,41 +1,42 @@
+// src/components/Service.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Service.css";
-import video from "../videos/b1.mp4"; // Assuming the video is in the same folder as Service.js
+import video from "../videos/b1.mp4";
 
 const services = [
   {
     id: "01",
+    slug: "fullstack",
     title: "Full Stack Developer Courses",
-    tags: ["HTML", "CSS", "JavaScript", "MongoDB", "Node.js", "React"],
+    tags: ["HTML", "CSS", "JavaScript", "python", "django", "React","python", "Django ", "php", "database", "SQL", "java"],
     description:
-      "Our Full Stack Developer course teaches you to build complete web applications from scratch. Learn frontend and backend technologies, API integration, and deployment using real-world projects."
+      "Our Full Stack Developer course teaches you to build complete web applications from scratch."
   },
   {
     id: "02",
+    slug: "frontend",
     title: "Frontend Developer",
-    tags: ["HTML", "CSS", "JavaScript", "React", "UI/UX"],
+    tags: ["HTML", "CSS", "JavaScript", "React"],
     description:
-      "Master the art of creating stunning and responsive web interfaces. This course covers everything from HTML/CSS basics to modern JavaScript frameworks like React, focusing on performance and usability."
+      "Master the art of creating stunning and responsive web interfaces using modern frontend technologies."
   },
   {
     id: "03",
+    slug: "backend",
     title: "Backend Developer",
-    tags: ["Node.js", "Express", "MongoDB", "SQL", "Authentication"],
+    tags: ["python", "Django ", "php", "database", "SQL", "java"],
     description:
-      "Learn to design robust backend systems with Node.js and Express. This course covers RESTful APIs, database management, server-side logic, and secure authentication techniques."
+      "Learn to build robust backend systems with Node.js, Express, and databases."
   },
-  {
-    id: "04",
-    title: "Digital Marketing",
-    tags: ["SEO", "Social Media", "Email Marketing", "Google Ads", "Analytics"],
-    description:
-      "This course provides hands-on experience with modern digital marketing strategies. Learn SEO, PPC, email campaigns, analytics, and how to build a powerful online presence for any brand."
-  }
 ];
 
-const ServiceItem = ({ id, title, tags, description, index }) => {
+const ServiceItem = ({ id, title, tags, description, slug, index }) => {
+  const navigate = useNavigate();
+  const handleClick = () => navigate(`/yashvi/${slug}`);
+
   return (
-    <div className={`service-item card-${index}`}>
+    <div className={`service-item card-${index}`} onClick={handleClick} style={{ cursor: "pointer" }}>
       <div className="service-header">
         <span className="service-id">{id}</span>
         <div>
@@ -58,21 +59,14 @@ function Service() {
           <h1>Improve Your Skills.</h1>
           <h3>Internship for IT/CS Students.</h3>
           <p>
-            Training and development is critical for any professional. It helps
-            you improve your performance and helps your organization meet its
-            business goals. Building new skills makes an individual more
-            efficient at a job or capable of handling different responsibilities
-            and challenges. A professional who receives the necessary training is
-            better able to perform one’s job. The training strengthens your
-            confidence because you have a deeper understanding of your role and
-            responsibilities to perform even better and think of new ideas that
-            help you excel.
+            Training and development help you perform better, grow in your role, and build new ideas.
           </p>
         </div>
         <div className="top-banner-right">
           <video src={video} autoPlay loop muted playsInline />
         </div>
       </div>
+
       {services.map((service, index) => (
         <ServiceItem key={index} {...service} index={index + 1} />
       ))}

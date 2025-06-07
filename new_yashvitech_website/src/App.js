@@ -9,6 +9,7 @@ import About from "./Components/about/mainabout";
 import Main from "./Components/home/main";
 import Header from "./Components/home/header";
 import Footer from "./Components/home/footer";
+import Yashvi from "./Components/careercard/Yashvi"; // ✅ add this
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
+          <Route path="/yashvi/:slug" element={<Yashvi />} /> {/* ✅ new route */}
         </Routes>
       </div>
       <Footer />
