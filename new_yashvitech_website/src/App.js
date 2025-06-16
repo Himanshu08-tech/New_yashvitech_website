@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Career from "./Components/Career/Career";
 import Service from "./Components/Service/Service";
@@ -9,13 +9,13 @@ import About from "./Components/about/mainabout";
 import Main from "./Components/home/main";
 import Header from "./Components/home/header";
 import Footer from "./Components/home/footer";
-import Yashvi from "./Components/careercard/Yashvi"; // ✅ add this
+// import Yashvi from "./Components/careercard/Yashvi"; 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Header />
-      <div style={{ paddingTop: "60px" }}>
+      <div style={{ marginTop: "100px" }} >
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/career" element={<Career />} />
@@ -23,11 +23,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
-          <Route path="/yashvi/:slug" element={<Yashvi />} /> {/* ✅ new route */}
         </Routes>
       </div>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 }
 
