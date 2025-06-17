@@ -4,9 +4,11 @@
    align-items: center;
    min-height: 600px;
    background: transparent;
+   margin-top: 50px;
 }
 
 .card-container {
+   /* border: 1px solid red; */
    width: 50%;
    height: 550px;
    display: flex;
