@@ -1,0 +1,14 @@
+.feature-card:hover {
+   transform: scale(1.1) !important;
+   transition: ease 0.5s !important;
+
+   /* height: 300px; */
+}
+
+.feature-card {
+   background: radial-gradient(closest-side,
+         rgba(206, 134, 251, 0.2) 5%,
+         transparent 100%) !important;
+   ;
+   
+}

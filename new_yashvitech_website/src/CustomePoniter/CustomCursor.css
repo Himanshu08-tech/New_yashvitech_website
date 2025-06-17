@@ -1,0 +1,19 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Optional hover effect */
+.hover-target:hover ~ .custom-cursor {
+  transform: scale(2);
+  background-color: rgba(255, 255, 255, 0.2);
+}

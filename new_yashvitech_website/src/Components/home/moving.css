@@ -1,0 +1,113 @@
+.carousel-center-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 600px;
+   background: transparent;
+}
+
+.card-container {
+   width: 50%;
+   height: 550px;
+   display: flex;
+   border-radius: 20px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.card-content {
+   flex: 1;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.card-tag {
+   background-color: #eaf0ff;
+   padding: 5px 15px;
+   border-radius: 999px;
+   color: #2a60ff;
+   font-weight: 600;
+   font-size: 0.85rem;
+   margin-bottom: 10px;
+   width: fit-content;
+}
+
+.card-content h2 {
+   font-size: 1.8rem;
+   margin-bottom: 15px;
+   color: #1f2937;
+}
+
+.card-content p {
+   font-size: 1rem;
+   line-height: 1.6;
+   color: #4b5563;
+   margin-bottom: 20px;
+}
+
+.card-content button {
+   background-color: #2a60ff;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 8px;
+   font-size: 1rem;
+   cursor: pointer;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.card-image-wrapper {
+   flex: 1;
+   background-color: #eaf0ff;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-image-wrapper img {
+   width: 220px;
+   z-index: 2;
+}
+
+.bg-circle {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background: radial-gradient(circle, #60a5fa, #3b82f6);
+   opacity: 0.4;
+   position: absolute;
+   top: 30%;
+   left: 38%;
+   transform: translate(-30%, -30%);
+}
+
+/* Ensures centering inside AntD slick slide */
+.slick-slide>div {
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Hide focus outlines caused by keyboard nav (visually only) */
+.carousel-center-wrapper *:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+.arrow-btn {
+   color: #000;
+   position: relative;
+   bottom: 320px;
+   left: 270px;
+   font-size: 1.2rem;
+   background-color: transparent;
+   display: inline-block;
+   border: none;
+   outline: none;
+
+}

@@ -4,37 +4,35 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin-top: 80px !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 70px;
   top: 0;
   z-index: 1000;
-  /* background: radial-gradient(circle at top right, rgba(206, 134, 251, 0.3) 15%, rgba(255, 255, 255, 0.9) 50%); */
-
-  background:
-    radial-gradient(circle at top left, rgba(206, 134, 251, 0.3) 15%, transparent 50%),
-    radial-gradient(circle at top right, rgba(206, 134, 251, 0.3) 15%, transparent 50%),
-    radial-gradient(circle at center, rgba(206, 134, 251, 0.3) 10%, transparent 50%),
+  background: radial-gradient(circle at top left,
+      rgba(206, 134, 251, 0.3) 15%,
+      transparent 50%),
+    radial-gradient(circle at top right,
+      rgba(206, 134, 251, 0.3) 15%,
+      transparent 50%),
+    radial-gradient(circle at center,
+      rgba(206, 134, 251, 0.3) 10%,
+      transparent 50%),
     rgba(255, 255, 255, 0.9);
-  /* base color */
   background-color: #fff;
-  /* background: rgba(255, 255, 255, 0.25); */
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px);  */
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .navbar-container {
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  max-width: 1100px;
+  max-width: 80%;
+  height: 70px;
   margin: auto;
 }
 
@@ -47,29 +45,24 @@
   display: flex;
   gap: 2px;
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
-
 
 .nav-links li a {
   text-decoration: none;
-  color: #000;
+  color: #0000008d;
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  /* font-family: sans-serif; */
 }
-
-
 
 .nav-links li a.active-link {
   color: #004cffb9;
   font-weight: 600;
-  font-size: 1.3rem;
   border-radius: 50px;
 }
-
-
 
 /* .auth-buttons {
   text-transform: capitalize;
@@ -83,8 +76,7 @@
 }
 
 .header-btn {
-  font-size: 1.2rem;
-  /* color: #fff; */
+  font-size: 1.1rem;
   padding: 5px;
   padding-left: 7px;
   padding-right: 7px;
@@ -97,20 +89,20 @@
   height: 40px;
   outline: none;
   border: none;
-  background-color: #007bff;
+  background-color: #6a0dad;
 }
 
 .header-btn:hover {
-  background-color: #007bff;
-  border: 2px solid #007bff;
+  font-size: 1.2rem;
+  background: #5900b3;
   color: #fff;
   transform: scale(1.1);
-
+  transition: ease-out 0.3s;
 }
 
-.btn-active-link{
-  color: #007bff;
-  background-color: #000;
+.btn-active-link {
+  color: #fff;
+  background-color: #007bff;
 }
 
 .menu-icon {
@@ -141,16 +133,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 180px 20px 20px 20px;
+  padding: 170px 20px 20px 20px;
   background:
     /* radial-gradient(circle at top left, rgba(206, 134, 251, 0.3) 15%, transparent 50%),
     radial-gradient(circle at top right, rgba(206, 134, 251, 0.3) 15%, transparent 50%), */
     /* radial-gradient(circle at center, rgba(206, 134, 251, 0.3) 10%, transparent 50%),
     rgba(255, 255, 255, 0.9); */
     /* background: */
-    radial-gradient(closest-side, rgba(206, 134, 251, 0.2) 10%, transparent 100%);
-
-
+    /* linear-gradient(-10deg, #cda8f7, transparent); */
+    radial-gradient(closest-side,
+      rgba(206, 134, 251, 0.2) 10%,
+      transparent 100%);
 }
 
 .hero::after {
@@ -163,12 +156,12 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
 }
 
-
 .hero h1 {
   font-size: 2.8rem;
   max-width: 900px;
   margin: 0 auto 20px;
   line-height: 1.4;
+  text-transform: capitalize;
 }
 
 .highlight {
@@ -188,7 +181,7 @@
   padding: 12px 30px;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCode, FaUsers, FaRocket, FaLaptopCode, FaLightbulb, FaChartLine } from "react-icons/fa";
+import "../../Styles/homeCard.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,21 +79,21 @@ const FeatureCard = ({ icon, title, description }) => {
         position: "relative",
         borderRadius: "1.5rem",
         padding: "2rem 1.5rem",
-        boxShadow: "0 10px 30px rgba(10, 10, 10, 0.1)",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         background: "#fff",
-        maxWidth: "300px",
+        maxWidth: "360px",
         width: "calc(33.333% - 2rem)",
         minHeight: "280px",
         textAlign: "center",
         cursor: "pointer",
-        transformStyle: "preserve-3d",
         perspective: "1200px",
         transition: "all 0.3s ease",
+
       }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
+    // onMouseMove={handleMouseMove}
+    // onMouseEnter={handleMouseEnter}
+    // onMouseLeave={handleMouseLeave}
+    // onClick={handleClick}
     >
       {/* Circle Follower */}
       <div
@@ -126,12 +127,13 @@ const FeaturesSection = () => {
   return (
     <section
       style={{
+        // border:"1px solid red",
         display: "flex",
         gap: "2rem",
         justifyContent: "center",
         flexWrap: "wrap",
-        padding: "4rem 2rem",
-        background: "radial-gradient(circle at right, rgba(131, 125, 253, 0.2) 10%, rgba(255, 255, 255, 1) 20%)",
+        padding: "64px 32px"
+        // background: "radial-gradient(circle at right, rgba(131, 125, 253, 0.2) 10%, rgba(255, 255, 255, 1) 20%)",
       }}
     >
       <FeatureCard
