@@ -6,9 +6,9 @@ import About2 from "./About2"
 function mainabout() {
   return (
     <>
-    <About></About>
-    <About1></About1>
-    <About2></About2>
+    <About/>
+    <About1/>
+    <About2/>
     </>
   )
 }

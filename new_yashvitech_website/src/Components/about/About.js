@@ -12,7 +12,7 @@ const About = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const titleText = 'ABOUTUS';
+  const titleText = 'ABOUT US';
 
   return (
     <section className="about-section">

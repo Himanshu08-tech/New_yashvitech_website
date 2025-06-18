@@ -9,7 +9,7 @@ const services = [
     id: "01",
     slug: "fullstack",
     title: "Full Stack Developer Courses",
-    tags: ["HTML", "CSS", "JavaScript", "python", "django", "React","python", "Django ", "php", "database", "SQL", "java"],
+    tags: ["HTML", "CSS", "JavaScript", "python", "django", "React", "python", "Django ", "php", "database", "SQL", "java"],
     description:
       "Our Full Stack Developer course teaches you to build complete web applications from scratch."
   },

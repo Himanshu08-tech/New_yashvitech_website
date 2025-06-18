@@ -4,7 +4,7 @@ import Logo from "./yashvitechlogo.png";
 import './header.css';
 
 const Header = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <nav className="navbar">

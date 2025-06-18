@@ -5,10 +5,43 @@
   color: #000;
 }
 
+form {
+  /* border: 1px solid red; */
+  margin-left: 5px;
+}
+
+form input {
+  text-transform: capitalize;
+  font-size: 1rem;
+  outline: none;
+}
+
+form textarea {
+  text-transform: capitalize;
+  font-size: 1rem;
+  outline: none;
+}
+
+form button {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #004cffb9;
+  font-weight: 500;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.3s;
+  background-color: #6a1b9a;
+}
+
 .get-in-touch h1 {
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 30px;
+  margin-left: 2px;
+  /* border: 1px solid red; */
 }
 
 .contact-container {
@@ -24,6 +57,7 @@
 .contact-form h3 {
   margin-bottom: 10px;
   font-size: 18px;
+  margin-left: 8px;
 }
 
 .contact-form p {
@@ -154,6 +188,7 @@ button {
   left: 0;
   color: #000;
 }
+
 .get-in-touch {
   padding: 40px;
   background: #f5edff;

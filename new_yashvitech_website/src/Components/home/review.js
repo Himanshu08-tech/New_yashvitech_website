@@ -1,4 +1,5 @@
 import React from "react";
+import "./Review.css";
 
 const reviews = {
   clients: [
@@ -18,87 +19,35 @@ const reviews = {
   ],
 };
 
-const keyframes = `
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-`;
-
-const scrollTrackStyle = (duration = "50s") => ({
-  display: "inline-flex",
-  animation: `scrollLeft ${duration} linear infinite`,
-});
-
 const ReviewSection = () => {
   const renderCards = (data) =>
     [...data, ...data].map((item, index) => (
-      <div
-        key={index}
-        style={{
-          flex: "0 0 auto",
-          width: "300px",
-          margin: "0 12px",
-          padding: "24px",
-          borderRadius: "16px",
-          background: "#ffffff",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          transition: "transform 0.3s",
-        }}
-      >
-        <p style={{ fontSize: "0.95rem", color: "#374151", lineHeight: "1.6", marginBottom: "20px" }}>
-          {item.review}
-        </p>
-        <strong style={{ color: "#111827", fontSize: "1rem" }}>{item.name}</strong>
+      <div className="review-card" key={index}>
+        <p className="review-text">{item.review}</p>
+        <strong className="review-author">{item.name}</strong>
       </div>
     ));
 
   return (
-    <div
-      style={{
-         background: 'radial-gradient(circle at bottom left, #f3e7ff, #fbeaff, #e0f1ff, #ffece6, #ffffff)',
-        padding: "80px 20px",
-        fontFamily: "Inter, sans-serif",
-        overflow: "hidden",
-      }}
-    >
-      <style>{keyframes}</style>
-      <style>{`
-        .scroll-container {
-          overflow: hidden;
-          position: relative;
-          white-space: nowrap;
-        }
-        .scroll-track {
-          display: inline-flex;
-        }
-        .scroll-container:hover .scroll-track {
-          animation-play-state: paused;
-        }
-      `}</style>
-
+    <div className="review-section">
       {/* Client Reviews */}
-      <h2 style={{ textAlign: "center", fontSize: "2.2rem", color: "#1e1b4b", marginBottom: "40px" }}>
-        What Our Clients Say
-      </h2>
+      {/* <h2 className="review-heading">What Our Clients Say</h2> */}
+      <h2 className="review-heading">Insights from Our Clients</h2>
       <div className="scroll-container" style={{ marginBottom: "80px" }}>
-        <div className="scroll-track" style={scrollTrackStyle("50s")}>
+        <div className="scroll-track">
           {renderCards(reviews.clients)}
         </div>
       </div>
 
       {/* Student Reviews */}
-      <h2 style={{ textAlign: "center", fontSize: "2.2rem", color: "#1e1b4b", marginBottom: "40px" }}>
-        What Our Students Say
-      </h2>
+      {/* <h2 className="review-heading">What Our Students Say</h2> */}
+      <h2 className="review-heading">Insights from Our Students</h2>
       <div className="scroll-container">
-        <div className="scroll-track" style={scrollTrackStyle("55s")}>
+        <div className="scroll-track slow">
           {renderCards(reviews.students)}
         </div>
       </div>
+
     </div>
   );
 };

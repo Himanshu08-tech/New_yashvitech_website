@@ -124,7 +124,7 @@ import './Career.css';
 import careersImage from '../Images/a.webp';
 import secondImage from '../Images/aa.jpg';
 import video1 from '../videos/u1.mp4';
-import video2 from '../videos/u4.mp4';    
+import video2 from '../videos/u4.mp4';
 import video3 from '../videos/u3.mp4'; // Import your video files
 
 const Careers = () => {

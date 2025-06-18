@@ -103,12 +103,9 @@ const Navbar = () => {
       </section>
 
       <section><Card /></section>
-      
       <section><Moving /></section>
       <section style={{ marginTop: "40px" }}><Step /></section>
       <section><Review /></section>
-      <section><Footer /></section>
-      <section><Headers /></section>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Image1 from "./freepik__the-style-is-3d-model-with-octane-render-volumetri__18107-removebg-preview.png";
-import "./moving.css";
+import "./NewMoving.css";
 
 const StackedCards = () => {
   const carouselRef = useRef();

@@ -1,17 +1,14 @@
-.stacked-container {
-   position: relative;
-   padding: 40px 0;
-}
-
-.stacked-card-wrapper {
-   width: 100%;
+.carousel-center-wrapper {
    display: flex;
    justify-content: center;
-   position: sticky;
-   top: 120px;
+   align-items: center;
+   min-height: 600px;
+   background: transparent;
+   margin-top: 50px;
 }
 
-.stacked-card {
+.card-container {
+   /* border: 1px solid red; */
    width: 50%;
    height: 550px;
    display: flex;
@@ -20,16 +17,15 @@
    overflow: hidden;
 }
 
-.stacked-card-left {
-   flex: 0.9;
+.card-content {
+   flex: 1;
    padding: 40px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   
 }
 
-.stacked-card-tag {
+.card-tag {
    background-color: #eaf0ff;
    padding: 5px 15px;
    border-radius: 999px;
@@ -40,20 +36,20 @@
    width: fit-content;
 }
 
-.stacked-card-title {
+.card-content h2 {
    font-size: 1.8rem;
    margin-bottom: 15px;
    color: #1f2937;
 }
 
-.stacked-card-text {
+.card-content p {
    font-size: 1rem;
    line-height: 1.6;
    color: #4b5563;
    margin-bottom: 20px;
 }
 
-.stacked-card-button {
+.card-content button {
    background-color: #2a60ff;
    color: #fff;
    padding: 10px 20px;
@@ -66,7 +62,7 @@
    gap: 8px;
 }
 
-.stacked-card-right {
+.card-image-wrapper {
    flex: 1;
    background-color: #eaf0ff;
    position: relative;
@@ -75,7 +71,12 @@
    justify-content: center;
 }
 
-.stacked-card-circle {
+.card-image-wrapper img {
+   width: 220px;
+   z-index: 2;
+}
+
+.bg-circle {
    width: 200px;
    height: 200px;
    border-radius: 50%;
@@ -87,7 +88,28 @@
    transform: translate(-30%, -30%);
 }
 
-.stacked-card-image {
-   width: 220px;
-   z-index: 2;
+/* Ensures centering inside AntD slick slide */
+.slick-slide>div {
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Hide focus outlines caused by keyboard nav (visually only) */
+.carousel-center-wrapper *:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+.arrow-btn {
+   color: #000;
+   position: relative;
+   bottom: 320px;
+   left: 270px;
+   font-size: 1.2rem;
+   background-color: transparent;
+   display: inline-block;
+   border: none;
+   outline: none;
+
 }

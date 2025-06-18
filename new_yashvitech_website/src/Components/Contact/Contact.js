@@ -14,12 +14,23 @@ const FAQItem = ({ question, answer }) => {
 const GetInTouch = () => {
   return (
     <div className="get-in-touch">
-      <h1>Get in touch with <span className="highlight"></span></h1>
-      
+      {/* <h1>Get in touch with <span className="highlight"></span></h1> */}
+      <h1> Let's Get In Touch<span className="highlight"></span></h1>
+
       <div className="contact-container">
         <div className="contact-form">
           <h3>Send a Message</h3>
-          <p>Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+          {/* <p>Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p> */}
+          <p style={{ position: "relative", left: "8px" }}>
+            Or just reach out manually to{" "}
+            <a
+              href="mailto:info@yashvitech.com"
+              style={{ color: "purple", textDecoration: "none" }}
+            >
+              info@yashvitech.com
+            </a>
+          </p>
+
           <form>
             <div className="form-row">
               <input type="text" placeholder="Name" />
@@ -30,7 +41,7 @@ const GetInTouch = () => {
               <input type="text" placeholder="Phone Number" />
             </div>
             <textarea placeholder="Message" />
-            <button type="submit">→ Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
         <div className="contact-info">

@@ -101,6 +101,9 @@
 
 
 .top-banner-right {
+  /* border: 1px solid red; */
+  padding-top: 30px;
+  padding-bottom: 20px;
   flex: 1;
   display: flex;
   justify-content: center;

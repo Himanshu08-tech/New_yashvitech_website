@@ -43,7 +43,7 @@ const AboutYashviteck = () => {
 
         <div className="btn-box">
           <a
-            href="https://www.youtube.com/@YashvitechITSolutionOfficial" // 🔁 Replace with your actual YouTube link
+            href="https://www.youtube.com/@YashvitechITSolutionOfficial"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -95,13 +95,9 @@ const AboutYashviteck = () => {
               {services.map((service, index) => (
                 <SwiperSlide key={index}>
                   <div className="carousel-card">
-                    <div className="card-header">
-                    </div>
                     <h2>{service.title}</h2>
                     <p className="subtitle">{service.subtitle}</p>
-
-                    {/* 👇 Add the image here */}
-                    <img src={services.image} className="card-image" />
+                    <img src={service.image} className="card-image" />
                   </div>
                 </SwiperSlide>
 
