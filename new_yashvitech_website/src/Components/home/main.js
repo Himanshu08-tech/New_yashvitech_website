@@ -3,10 +3,9 @@ import Card from "./card";
 import About from "./aboutus";
 import Moving from "./moving";
 import Review from "./review";
-import Headers from "./header";
 import Step from "./steps";
-import Footer from "./footer";
 import "./header.css";
+import Services from "./Services/Services";
 
 const Navbar = () => {
   const statsRef = useRef();
@@ -104,6 +103,7 @@ const Navbar = () => {
 
       <section><Card /></section>
       <section><Moving /></section>
+      <section><Services /></section>
       <section style={{ marginTop: "40px" }}><Step /></section>
       <section><Review /></section>
     </>

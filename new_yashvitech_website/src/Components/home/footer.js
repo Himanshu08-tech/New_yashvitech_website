@@ -1,20 +1,30 @@
 import React from "react";
 import "./Footer.css";
+import Logo from './yashvitechlogo.png'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="site-footer">
       {/* Radial Gradient */}
-      <div className="footer-gradient"></div>
+      <div className="footer-gradient">
+        
+        <div className="logo">
+        <Link to="/">
+          <img src={Logo} alt="YashviTech" />
+        </Link>
+      </div>
+      </div>
 
       {/* Company Info */}
       <div className="footer-section">
         <h3>YASHVITECH IT SOLUTION</h3>
-        <p>
+        <p style={{paddingLeft:"5px"}}>
           A software solution provider company focused on digitising daily activities of organisations across
           major business sectors.
         </p>
       </div>
+     
 
       {/* Quick Links */}
       <div className="footer-section footer-links">
@@ -47,10 +57,13 @@ const Footer = () => {
         </p>
       </div>
 
+       
       {/* Copyright */}
       <div className="footer-copyright">
         Copyright © Yashvitech IT Solution 2024
       </div>
+
+    
     </footer>
   );
 };

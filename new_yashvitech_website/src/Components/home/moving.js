@@ -55,7 +55,7 @@ const StackedCards = () => {
                   card.image === Image2
                     ? { width: "300px" }
                     : card.image === Image3
-                      ? { width: "325px", height: "250px", position: "relative", bottom: "20px", right: "px" }
+                      ? { width: "330px", height: "220px", position: "relative", bottom: "35px", right: "px" }
                       : { width: "220px", zIndex: 2 }
                 }
               />

@@ -10,8 +10,6 @@ import Header from "./Components/home/header";
 import Footer from "./Components/home/footer";
 import CustomCursor from "./CustomePoniter/CustomCursor";
 import ScrollToTop from "./Components/ScrollToTop";
-// import Yashvi from "./Components/careercard/Yashvi"; 
-
 
 function App() {
   return (
@@ -19,7 +17,8 @@ function App() {
       <ScrollToTop />
       <CustomCursor />
       <Header />
-      <div style={{ marginTop: "70px" }} >
+
+      {/* Main wrapper with top padding to avoid overlap */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/services" element={<Service />} />
@@ -28,7 +27,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </div>
+
       <Footer />
     </BrowserRouter>
   );

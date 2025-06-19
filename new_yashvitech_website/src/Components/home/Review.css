@@ -8,7 +8,7 @@
 }
 
 .review-heading {
-   font-style:italic;
+  font-style: italic;
   text-align: center;
   font-size: 2.2rem;
   color: #1e1b4b;
@@ -19,16 +19,15 @@
   overflow: hidden;
   position: relative;
   white-space: nowrap;
-   /* border: 1px solid red; */
-
+  /* border: 1px solid red; */
 }
+
 
 .scroll-container:hover .scroll-track {
   animation-play-state: paused;
 }
 
 .scroll-track {
-
   display: inline-flex;
   animation: scrollLeft 50s linear infinite;
 }
@@ -51,6 +50,11 @@
   transition: transform 0.3s;
 }
 
+.review-card:hover {
+  transform: scaleX(1.1);
+  transition: all 0.3s;
+}
+
 .review-text {
   font-size: 0.95rem;
   color: #374151;
@@ -67,6 +71,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
