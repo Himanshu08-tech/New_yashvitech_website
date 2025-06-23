@@ -1,9 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion"; // ✅ Import Framer Motion
+import { motion } from "framer-motion"; 
 import Image1 from "./freepik__the-style-is-3d-model-with-octane-render-volumetri__18107-removebg-preview.png";
 import Image2 from "../MyImage/image-removebg-preview.png";
 import Image3 from "../MyImage/istockphoto-1433420052-612x612-removebg-preview.png";
-import "./Moving.css";
+import "./moving.css";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 60 },
