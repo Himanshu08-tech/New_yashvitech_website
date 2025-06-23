@@ -1,0 +1,75 @@
+.portfolioTopContainer {
+   display: flex;
+   flex-wrap: wrap;
+   /* justify-content: space-evenly; */
+   gap: 40px;
+
+   padding: 30px;
+   padding-top: 70px;
+   padding-left: 45px;
+   background: radial-gradient(circle at bottom left, #f3e7ff, #fbeaff, #e0f1ff, #ffece6, #ffffff);
+
+}
+
+.portfolioCard {
+
+   width: 380px;
+   padding: 5px;
+   height: 380px;
+   border-radius: 20px;
+}
+
+.portfolioCard:hover {
+   transform: scale(1.05);
+   transition: transform ease-in 0.3s;
+}
+
+.portfolioCard img {
+   border-radius: 20px;
+   width: 370px;
+   height: 290px;
+   object-fit: fill;
+}
+
+.portfolio-btn {
+   font-weight: 500;
+   position: relative;
+    left: 70px;
+   top: 20px;
+   background-color: purple;
+   padding: 10px;
+   font-size: 1rem;
+   color: white;
+   border-radius: 8px;
+   cursor: pointer;
+   z-index: 1;
+   overflow: hidden;
+  
+}
+
+.portfolio-btn::before {
+   content: "";
+   border-radius: 8px;
+   position: absolute;
+   padding-top: 8px;
+   top: 0;
+   left: 0;
+   width: 0%;
+   /* start from 0% */
+   height: 100%;
+   background-color: #004cfffa;
+   z-index: 1000;
+   /* sit behind the text */
+   transition: width 0.4s ease-in-out;
+}
+
+.portfolio-btn:hover::before {
+   width: 100%;
+   /* expand to full width */
+   content: "Click here";
+}
+
+.portfolio-btn:hover {
+   color: #fff;
+   /* Optional: Ensure text stays visible */
+}

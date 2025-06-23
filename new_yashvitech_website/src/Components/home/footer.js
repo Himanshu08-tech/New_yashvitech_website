@@ -8,31 +8,31 @@ const Footer = () => {
     <footer className="site-footer">
       {/* Radial Gradient */}
       <div className="footer-gradient">
-        
+
         <div className="logo">
-        <Link to="/">
-          <img src={Logo} alt="YashviTech" />
-        </Link>
-      </div>
+          <Link to="/">
+            <img src={Logo} alt="YashviTech" />
+          </Link>
+        </div>
       </div>
 
       {/* Company Info */}
       <div className="footer-section">
         <h3>YASHVITECH IT SOLUTION</h3>
-        <p style={{paddingLeft:"5px"}}>
+        <p style={{ paddingLeft: "5px" }}>
           A software solution provider company focused on digitising daily activities of organisations across
           major business sectors.
         </p>
       </div>
-     
+
 
       {/* Quick Links */}
       <div className="footer-section footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Portfolio</li>
+          <Link to='/about'> <li>About</li></Link>
+          <Link to='/contact'> <li>Contact</li></Link>
+          <Link to='/portfolio'><li>Portfolio</li></Link>
         </ul>
       </div>
 
@@ -57,13 +57,13 @@ const Footer = () => {
         </p>
       </div>
 
-       
+
       {/* Copyright */}
       <div className="footer-copyright">
         Copyright © Yashvitech IT Solution 2024
       </div>
 
-    
+
     </footer>
   );
 };

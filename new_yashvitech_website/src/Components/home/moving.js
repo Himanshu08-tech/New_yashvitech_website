@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion"; // ✅ Import Framer Motion
 import Image1 from "./freepik__the-style-is-3d-model-with-octane-render-volumetri__18107-removebg-preview.png";
-import Image2 from "../MyImage/image-removebg-preview.png"
-import Image3 from "../MyImage/istockphoto-1433420052-612x612-removebg-preview.png"
+import Image2 from "../MyImage/image-removebg-preview.png";
+import Image3 from "../MyImage/istockphoto-1433420052-612x612-removebg-preview.png";
 import "./Moving.css";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 const StackedCards = () => {
   const cardsData = [
@@ -32,16 +38,22 @@ const StackedCards = () => {
   return (
     <div className="stacked-container" style={{ height: `${cardsData.length * 100}vh` }}>
       {cardsData.map((card, i) => (
-        <div key={i} className="stacked-card-wrapper" style={{ zIndex: i }}>
+        <motion.div
+          key={i}
+          className="stacked-card-wrapper"
+          style={{ zIndex: i }}
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className="stacked-card" style={{ backgroundColor: card.bg }}>
             {/* Left */}
             <div className="stacked-card-left">
               <div className="stacked-card-tag">{card.tag}</div>
               <h2 className="stacked-card-title">{card.title}</h2>
               <p className="stacked-card-text">{card.text}</p>
-              <button className="stacked-card-button">
-                Learn more →
-              </button>
+              <button className="stacked-card-button">Learn more →</button>
             </div>
 
             {/* Right */}
@@ -55,14 +67,13 @@ const StackedCards = () => {
                   card.image === Image2
                     ? { width: "300px" }
                     : card.image === Image3
-                      ? { width: "330px", height: "220px", position: "relative", bottom: "35px", right: "px" }
+                      ? { width: "330px", height: "220px", position: "relative", bottom: "35px" }
                       : { width: "220px", zIndex: 2 }
                 }
               />
-
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

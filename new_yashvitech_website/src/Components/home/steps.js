@@ -1,8 +1,13 @@
 import React from 'react';
 import './Step.css';
 
+import AnimatedWrapper from '../../framer-motion-animation/AnimatedWrapper'
+
+
 const NoomoHeroFull = () => {
   return (
+          <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+    
     <section className="noomo-hero-section">
       {/* Left Side Big Text */}
       <div className="noomo-hero-left">
@@ -25,6 +30,7 @@ const NoomoHeroFull = () => {
         </p>
       </div>
     </section>
+    </AnimatedWrapper>
   );
 };
 

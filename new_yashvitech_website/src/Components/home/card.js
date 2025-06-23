@@ -27,50 +27,6 @@ const FeatureCard = ({ icon, title, description }) => {
     );
   }, []);
 
-  const handleMouseMove = (e) => {
-    const card = cardRef.current;
-    const circle = circleRef.current;
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    gsap.to(circle, {
-      x: x - rect.width / 2,
-      y: y - rect.height / 2,
-      duration: 0.3,
-      ease: "power2.out",
-    });
-
-    const rotateX = ((y / rect.height) - 0.5) * 12;
-    const rotateY = ((x / rect.width) - 0.5) * 12;
-    gsap.to(card, {
-      rotateX: -rotateX,
-      rotateY: rotateY,
-      transformPerspective: 1200,
-      duration: 0.3,
-      ease: "power2.out",
-    });
-  };
-
-  const handleMouseEnter = () => {
-    gsap.to(circleRef.current, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "power2.out" });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(cardRef.current, { rotateX: 0, rotateY: 0, duration: 0.5, ease: "power2.out" });
-    gsap.to(circleRef.current, { autoAlpha: 0, scale: 0.5, duration: 0.3, ease: "power2.out" });
-  };
-
-  const handleClick = () => {
-    gsap.to(cardRef.current, {
-      scale: 0.95,
-      duration: 0.1,
-      yoyo: true,
-      repeat: 1,
-      ease: "power1.inOut",
-    });
-  };
-
   return (
     <div
       ref={cardRef}
@@ -90,12 +46,7 @@ const FeatureCard = ({ icon, title, description }) => {
         transition: "all 0.3s ease",
 
       }}
-    // onMouseMove={handleMouseMove}
-    // onMouseEnter={handleMouseEnter}
-    // onMouseLeave={handleMouseLeave}
-    // onClick={handleClick}
     >
-      {/* Circle Follower */}
       <div
         ref={circleRef}
         style={{

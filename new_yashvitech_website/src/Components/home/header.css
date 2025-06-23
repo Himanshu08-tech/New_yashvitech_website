@@ -9,7 +9,7 @@
 /* Style the HR */
 .active-hr {
   display: flex;
-  height: 3px;
+  height: 2px;
   width: 100%;
   /* text-align: center; */
   background-color: #004cff;
@@ -71,7 +71,7 @@
 }
 
 .nav-links li:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.3s;
 }
 

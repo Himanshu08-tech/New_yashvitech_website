@@ -6,6 +6,12 @@ import Review from "./review";
 import Step from "./steps";
 import "./header.css";
 import Services from "./Services/Services";
+import Product from "./Products/Product";
+import { PiStudentBold } from "react-icons/pi";
+import { SiCodementor } from "react-icons/si";
+import { GoProject } from "react-icons/go";
+
+import AnimatedWrapper from "../../framer-motion-animation/AnimatedWrapper";
 
 const Navbar = () => {
   const statsRef = useRef();
@@ -33,9 +39,18 @@ const Navbar = () => {
     };
 
     const interval = setInterval(() => {
-      current.students = Math.min(current.students + increment.students, targetValues.students);
-      current.mentors = Math.min(current.mentors + increment.mentors, targetValues.mentors);
-      current.projects = Math.min(current.projects + increment.projects, targetValues.projects);
+      current.students = Math.min(
+        current.students + increment.students,
+        targetValues.students
+      );
+      current.mentors = Math.min(
+        current.mentors + increment.mentors,
+        targetValues.mentors
+      );
+      current.projects = Math.min(
+        current.projects + increment.projects,
+        targetValues.projects
+      );
 
       setStudentCount(current.students);
       setMentorCount(current.mentors);
@@ -70,42 +85,90 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="hero">
-        <h1>
-          Empower Your Career with{" "}
-          <span className="highlight">Live Projects</span>
-          <br />
-          and Real Development Experience.
-        </h1>
-        <p>
-          {/* Join YashviTech to gain hands-on coding skills through live
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section className="hero">
+          <h1>
+            Empower Your Career with{" "}
+            <span className="highlight">Live Projects</span>
+            <br />
+            and Real Development Experience.
+          </h1>
+          <p>
+            {/* Join YashviTech to gain hands-on coding skills through live
           internships and expert mentorship. */}
+            Join YashviTech to build real-world coding skills through live
+            internships and personalized mentorship from industry experts.
+          </p>
+          <button className="cta-btn">Explore Programs</button>
 
-          Join YashviTech to build real-world coding skills through live internships and personalized mentorship from industry experts.
-        </p>
-        <button className="cta-btn">Explore Programs</button>
-
-        <section className="stats" ref={statsRef}>
-          <div className="stat-item">
-            <h2>{studentCount.toLocaleString()}+</h2>
-            <p>Students Enrolled</p>
-          </div>
-          <div className="stat-item">
-            <h2>{mentorCount}+</h2>
-            <p>Expert Mentors</p>
-          </div>
-          <div className="stat-item">
-            <h2>{projectCount}+</h2>
-            <p>Live Projects</p>
-          </div>
+          <section className="stats" ref={statsRef}>
+            <div className="stat-item">
+              <PiStudentBold style={{ color: "#6a0dad", fontSize: "2rem" }} />
+              <h2>{studentCount.toLocaleString()}+</h2>
+              <p>Students Enrolled</p>
+            </div>
+            <div className="stat-item">
+              <SiCodementor
+                style={{
+                  color: "#6a0dad",
+                  fontSize: "2rem",
+                  position: "relative",
+                  right: "5px",
+                }}
+              />
+              <h2>{mentorCount}+</h2>
+              <p>Expert Mentors</p>
+            </div>
+            <div className="stat-item">
+              <GoProject
+                style={{
+                  color: "#6a0dad",
+                  fontSize: "2rem",
+                  position: "relative",
+                  right: "5px",
+                }}
+              />
+              <h2>{projectCount}+</h2>
+              <p>Live Projects</p>
+            </div>
+          </section>
         </section>
-      </section>
+      </AnimatedWrapper>
 
-      <section><Card /></section>
-      <section><Moving /></section>
-      <section><Services /></section>
-      <section style={{ marginTop: "40px" }}><Step /></section>
-      <section><Review /></section>
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section>
+          <Card />
+        </section>
+      </AnimatedWrapper>
+
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section>
+          <Moving />
+        </section>
+      </AnimatedWrapper>
+
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section>
+          <Services />
+        </section>
+      </AnimatedWrapper>
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section>
+          <Product />
+        </section>
+      </AnimatedWrapper>
+
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section style={{ marginTop: "40px" }}>
+          <Step />
+        </section>
+      </AnimatedWrapper>
+
+      <AnimatedWrapper variant="fadeInUp" delay={0.2}>
+        <section>
+          <Review />
+        </section>
+      </AnimatedWrapper>
     </>
   );
 };

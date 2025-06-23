@@ -6,17 +6,20 @@
   height: 500px;
   overflow: hidden;
   margin-top: 50px;
+
 }
 
 .left-section {
   width: 50%;
   margin-top: 50px;
   padding: 0 40px;
+  
 }
 
 .left-section p {
   position: relative;
   left: 5px;
+
 }
 
 .left-section h1 {
@@ -24,6 +27,8 @@
   font-size: 32px;
   line-height: 1.4;
   margin-bottom: 10px;
+  font-family: Roboto !important;
+
 }
 
 .right-section-carousel {
@@ -58,7 +63,7 @@
   /* deeper shadow for a floating effect */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 20px;
   /* slightly more rounded corners */
   text-align: center;
@@ -66,7 +71,7 @@
 
 .carousel-card h2 {
   margin-top: 100px;
-
+  /* color: red; */
 }
 
 
@@ -109,6 +114,8 @@
   /* soft dark gray */
   text-shadow: 1px 1px 2px rgba(249, 175, 90, 0.9);
   /* subtle shadow */
+  font-family: Roboto !important;
+
 }
 
 /* Subtitle */
@@ -118,6 +125,8 @@
   margin-bottom: 10px;
   position: relative;
   bottom: 20px;
+  font-family: Roboto !important;
+
 }
 
 .card-image {
@@ -169,7 +178,6 @@ html {
   height: 100%;
   overflow-y: auto;
   scroll-behavior: smooth;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* Container layout */

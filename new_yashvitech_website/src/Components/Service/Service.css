@@ -1,7 +1,8 @@
 .service-container {
-  max-width: 80%;
+  max-width: 90%;
   margin: 40px auto;
   font-family: "Helvetica Neue", sans-serif;
+  /* border: 1px solid red; */
 }
 
 .service-item {
@@ -14,6 +15,7 @@
   border-radius: 12px;
   margin-bottom: 16px;
   position: relative;
+  
 }
 
 .service-header {
