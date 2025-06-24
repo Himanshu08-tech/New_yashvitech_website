@@ -63,7 +63,7 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <CustomCursor />
       <Header />
       <div style={{ marginTop: "70px" }}>
