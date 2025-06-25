@@ -64,7 +64,7 @@ function App() {
   return (
     <>
       {/* <ScrollToTop /> */}
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Header />
       <div style={{ marginTop: "70px" }}>
         <AnimatePresence mode="wait">
