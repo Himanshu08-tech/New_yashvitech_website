@@ -3,13 +3,16 @@
    margin-left: auto;
    margin-right: auto;
    overflow: hidden;
-   background: radial-gradient(circle at bottom both, #f3e7ff, #fbeaff, #e0f1ff, #ffece6, #ffffff);
-   padding: 20px 0;
+   padding: 30px 0;
+   /* margin-top: 20px; */
 }
 
 
 .marquee-content {
-   /* border: 1px solid red; */
+   /* background-color: #1e1b4b  ; */
+   /* background: radial-gradient(circle at bottom left, #f3e7ff, #fbeaff, #e0f1ff, #ffece6, #ffffff); */
+
+border-radius: 20px;
    display: flex;
    animation: scroll-left 20s linear infinite;
    width: fit-content;
@@ -24,7 +27,7 @@
    text-align: center;
    font-size: 2.2rem;
    color: #1e1b4b;
-   margin-bottom: 20px;
+   /* margin-bottom: 20px; */
 }
 
 .marquee-item {

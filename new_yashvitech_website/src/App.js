@@ -58,6 +58,7 @@ import Footer from "./Components/home/footer";
 import CustomCursor from "./CustomePoniter/CustomCursor";
 import ScrollToTop from "./Components/ScrollToTop";
 import ReadMore from "./Components/home/Services/ReadMore/ReadMore";
+import SocialBar from "./SocialMediaIcon/SocialMediaIcon";
 
 function App() {
   const location = useLocation();
@@ -66,6 +67,7 @@ function App() {
       {/* <ScrollToTop /> */}
       {/* <CustomCursor /> */}
       <Header />
+      <SocialBar/>
       <div style={{ marginTop: "70px" }}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

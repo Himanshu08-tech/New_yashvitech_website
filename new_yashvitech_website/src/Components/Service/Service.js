@@ -4,6 +4,8 @@ import "./Service.css";
 import video from "../videos/b1.mp4";
 import AnimatedWrapper from '../../framer-motion-animation/AnimatedWrapper'
 import { motion } from "framer-motion";
+      
+import Portfolio_mid  from '../Portfolio/Portfolio_mid'
 
 
 const pageTransition = {
@@ -99,6 +101,8 @@ function Service() {
             <ServiceItem key={index} {...service} index={index + 1} />
           ))}
         </AnimatedWrapper>
+        <Portfolio_mid/>
+
       </div>
     </motion.div>
   );

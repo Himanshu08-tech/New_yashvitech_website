@@ -10,7 +10,7 @@ function portfolio() {
       <div>
       <PortfolioTop/>
         {/* <PortfolioTitlePage /> */}
-        <Portfolio_mid />
+        {/* <Portfolio_mid /> */}
         {/* <Portfolio_bottom /> */}
       </div>
     </>

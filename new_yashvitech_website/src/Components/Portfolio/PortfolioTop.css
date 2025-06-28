@@ -1,18 +1,15 @@
 .portfolioTopContainer {
    display: flex;
    flex-wrap: wrap;
-   /* justify-content: space-evenly; */
    gap: 40px;
-
    padding: 30px;
    padding-top: 70px;
-   padding-left: 45px;
+   padding-left: 50px;
    background: radial-gradient(circle at bottom left, #f3e7ff, #fbeaff, #e0f1ff, #ffece6, #ffffff);
 
 }
 
 .portfolioCard {
-
    width: 380px;
    padding: 5px;
    height: 380px;
@@ -34,33 +31,34 @@
 .portfolio-btn {
    font-weight: 500;
    position: relative;
-    left: 70px;
+   left: 40px;
    top: 20px;
    background-color: purple;
-   padding: 10px;
-   font-size: 1rem;
+   padding: 11px;
+   font-size: 1.2rem;
    color: white;
    border-radius: 8px;
    cursor: pointer;
    z-index: 1;
    overflow: hidden;
-  
+   width: 75%;  
 }
 
 .portfolio-btn::before {
    content: "";
    border-radius: 8px;
    position: absolute;
-   padding-top: 8px;
+   padding-top: 12px;
    top: 0;
    left: 0;
    width: 0%;
+   overflow-x:auto;
    /* start from 0% */
    height: 100%;
    background-color: #004cfffa;
    z-index: 1000;
    /* sit behind the text */
-   transition: width 0.4s ease-in-out;
+   transition: width 0.5s ease-in-out;
 }
 
 .portfolio-btn:hover::before {

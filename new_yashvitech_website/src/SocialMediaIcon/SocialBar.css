@@ -1,0 +1,66 @@
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 0 25px 25px 0;
+  transition: width 0.5s ease;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.social .content {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+/* Label is hidden by default */
+.label {
+  margin-left: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+}
+
+/* On hover: expand width and show label */
+.social:hover {
+  width: 130px;
+}
+
+.social:hover .label {
+  opacity: 1;
+}
+
+/* Background colors */
+.facebook {
+  background-color: #3b5998;
+}
+.instagram {
+  background-color: #e1306c;
+}
+.youtube {
+  background-color: #ff0000;
+}
+.linkedin {
+  background-color: #0077b5;
+}
