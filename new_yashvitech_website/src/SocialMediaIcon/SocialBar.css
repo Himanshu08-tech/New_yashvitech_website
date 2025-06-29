@@ -44,7 +44,7 @@
 
 /* On hover: expand width and show label */
 .social:hover {
-  width: 130px;
+  width: 120px;
 }
 
 .social:hover .label {
